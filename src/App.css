@@ -1,0 +1,198 @@
+/* RESET AND BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  overflow-x: hidden;
+  /* Set a dark base color for consistency */
+  background-color: #1f2937; 
+}
+
+/* 🚀 ANIMATED BACKGROUND CONTAINER (DARK & VIBRANT) */
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; /* Set to -10 to ensure it's below all content */
+  overflow: hidden;
+  /* DARK BASE GRADIENT */
+  background: linear-gradient(135deg, #1f2937 0%, #0f172a 100%); /* Slate/Blue Black */
+}
+
+/* Animated gradient mesh (Subtle pattern overlay) - ADJUSTED FOR DARK BACKGROUND */
+.animated-background::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* LIGHTER MESH COLORS FOR CONTRAST */
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 40% 80%, rgba(99, 102, 241, 0.2) 0%, transparent 35%);
+  animation: meshRotate 30s linear infinite;
+}
+
+@keyframes meshRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* 🎨 ORB ELEMENTS (GLOWING SPHERES) */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px); /* Increased blur for stronger glow */
+  opacity: 0.8; /* Increased opacity for brightness */
+  animation: float 25s infinite ease-in-out;
+  mix-blend-mode: screen; /* CRITICAL: 'screen' creates a brilliant glow effect on dark backgrounds */
+  pointer-events: none;
+}
+
+/* ORB COLORS AND SIZING */
+.orb-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.8) 0%, transparent 70%); /* Violet */
+  top: -10%;
+  left: -5%;
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.orb-2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(234, 179, 8, 0.7) 0%, transparent 70%); /* Amber */
+  top: 40%;
+  right: -10%;
+  animation-delay: 5s;
+  animation-duration: 30s;
+}
+
+.orb-3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.7) 0%, transparent 70%); /* Emerald Green */
+  bottom: -5%;
+  left: 10%;
+  animation-delay: 10s;
+  animation-duration: 28s;
+}
+
+.orb-4 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(244, 63, 94, 0.6) 0%, transparent 70%); /* Rose/Red */
+  top: 50%;
+  left: 40%;
+  animation-delay: 15s;
+  animation-duration: 35s;
+}
+
+.orb-5 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.7) 0%, transparent 70%); /* Blue */
+  top: 20%;
+  right: 20%;
+  animation-delay: 8s;
+  animation-duration: 32s;
+}
+
+.orb-6 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.7) 0%, transparent 70%); /* Cyan */
+  bottom: 20%;
+  right: 30%;
+  animation-delay: 12s;
+  animation-duration: 27s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(100px, -80px) scale(1.15);
+  }
+  50% {
+    transform: translate(-60px, 100px) scale(0.85);
+  }
+  75% {
+    transform: translate(80px, 60px) scale(1.08);
+  }
+}
+
+/* 🔗 UI INTERACTIVITY TRANSITIONS (Kept as is) */
+button, a {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for dark mode */
+}
+
+/* Card hover effects */
+.card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow for dark mode */
+}
+
+/* Link underline animation */
+a {
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Remove underline for icon links */
+a svg {
+  position: relative;
+}
+
+a:has(svg)::after {
+  display: none;
+}

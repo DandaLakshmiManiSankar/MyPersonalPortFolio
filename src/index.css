@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this CSS to your project's global stylesheet (e.g., index.css or global.css) */
+
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; /* Ensures background is behind all content */
+  overflow: hidden;
+  pointer-events: none; /* Prevents background from interfering with clicks */
+}
+
+.orb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.6;
+  filter: blur(80px); /* Creates a soft, glowing effect */
+  animation: moveOrb 30s infinite alternate;
+}
+
+/* Define color, size, position, and animation variables for each orb */
+.orb-1 {
+  background: rgba(147, 197, 253, 0.7); /* Blue-300 */
+  top: 10%;
+  left: 10%;
+  --scale: 1.5;
+  --rand-x: 0.8; 
+  --rand-y: 1.2; 
+  animation-delay: 0s;
+}
+.orb-2 {
+  background: rgba(251, 189, 212, 0.7); /* Pink-300 */
+  top: 70%;
+  left: 25%;
+  --scale: 1.2;
+  --rand-x: -1.5; 
+  --rand-y: 0.7; 
+  animation-delay: 5s;
+}
+.orb-3 {
+  background: rgba(167, 243, 208, 0.7); /* Teal-300 */
+  top: 50%;
+  right: 5%;
+  --scale: 1.8;
+  --rand-x: 1.1; 
+  --rand-y: -0.9; 
+  animation-delay: 10s;
+}
+.orb-4 {
+  background: rgba(253, 230, 138, 0.7); /* Yellow-300 */
+  bottom: 0%;
+  right: 60%;
+  --scale: 0.9;
+  --rand-x: -0.5; 
+  --rand-y: -1.3; 
+  animation-delay: 15s;
+}
+.orb-5 {
+  background: rgba(129, 140, 248, 0.7); /* Indigo-300 */
+  top: 30%;
+  left: 50%;
+  --scale: 1.3;
+  --rand-x: 1.3; 
+  --rand-y: 0.5; 
+  animation-delay: 20s;
+}
+.orb-6 {
+  background: rgba(252, 165, 165, 0.7); /* Red-300 */
+  bottom: 20%;
+  right: 20%;
+  --scale: 1.0;
+  --rand-x: -0.9; 
+  --rand-y: 1.1; 
+  animation-delay: 25s;
+}
+
+/* Keyframes for the fluid, random movement */
+@keyframes moveOrb {
+  0% {
+    transform: translate(0, 0) scale(var(--scale));
+  }
+  25% {
+    transform: translate(calc(var(--rand-x) * 50vw), calc(var(--rand-y) * 20vh)) scale(var(--scale));
+  }
+  50% {
+    transform: translate(calc(var(--rand-x) * -30vw), calc(var(--rand-y) * -40vh)) scale(calc(var(--scale) * 1.1));
+  }
+  75% {
+    transform: translate(calc(var(--rand-x) * 10vw), calc(var(--rand-y) * -10vh)) scale(var(--scale));
+  }
+  100% {
+    transform: translate(0, 0) scale(var(--scale));
+  }
+}
