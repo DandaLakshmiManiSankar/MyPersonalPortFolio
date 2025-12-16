@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import profile from "../assets/profile.png"; 
+import emailjs from "emailjs-com";
 
 import { 
   Github, 
@@ -324,8 +325,25 @@ const Portfolio = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Message sent successfully!");
-    setFormData({ name: "", email: "", message: "" });
+    emailjs
+      .send(
+        "service_0acjhkk",
+        "template_e3hg62k",
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        "lu7E9SnctUtgC0ZqL"
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        alert("Failed to send message. Please try again.");
+        console.error("EmailJS Error:", error);
+      });
   };
 
   const navLinks = [
