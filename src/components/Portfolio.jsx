@@ -104,7 +104,7 @@ const portfolioData = {
       image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&q=80",
       tech: ["ML Models(XGBoost/NaiveBayes)", "Python", "Streamlit", "AWS", "Healthcare AI"],
       metrics: ["~90% Accuracy", "40% Better Consistency", "Cloud Deployed", "Real-time Predictions"],
-      github: "https://github.com/DandaLakshmiManiSankar",
+      github: "https://heartattackriskpredictionproject.streamlit.app/",
       demo: null,
       featured: true
     },
