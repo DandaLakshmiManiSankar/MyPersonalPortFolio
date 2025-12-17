@@ -78,11 +78,11 @@ const portfolioData = {
     {
       id: 1,
       title: "Blood Cell Detection System",
-      description: "Developed a YOLO-based deep learning model for real-time blood cell detection and classification. Achieved 89% accuracy on BCCD dataset with 98% precision in bounding-box detection.",
+      description: "Developed a YOLO-based deep learning model for real-time blood cell detection and classification. Achieved 89% accuracy on BCCD dataset with 98% precision in bounding-box detection.Deployed in HuggingFace.",
       image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
       tech: ["YOLO", "Python", "OpenCV", "Streamlit", "Computer Vision"],
       metrics: ["89% Accuracy", "98% Precision", "35% Faster Inference", "50+ Concurrent Users"],
-      github: "https://github.com/DandaLakshmiManiSankar/BloodCelldetection",
+      github: "https://huggingface.co/spaces/DandaLakshmi/blood-cell-detection",
       demo: null,
       featured: true
     },
