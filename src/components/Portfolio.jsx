@@ -115,7 +115,7 @@ const portfolioData = {
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80",
       tech: ["GPT-3.5", "Gemini API", "Mistral AI", "Python", "Telegram API"],
       metrics: ["100+ Weekly Users", "<2s Response Time", "35% Efficiency Gain", "Multi-Model Integration"],
-      github: "https://github.com/DandaLakshmiManiSankar",
+      github: "https://github.com/DandaLakshmiManiSankar/TelegramChatBot",
       demo: null,
       featured: true
     },
