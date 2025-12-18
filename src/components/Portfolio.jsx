@@ -78,11 +78,11 @@ const portfolioData = {
     {
       id: 1,
       title: "Blood Cell Detection System",
-      description: "Developed a YOLO-based deep learning model for real-time blood cell detection and classification. Achieved 89% accuracy on BCCD dataset with 98% precision in bounding-box detection.Deployed in HuggingFace.",
+      description: "Developed a YOLO-based deep learning model for real-time blood cell detection and classification. Achieved 89% accuracy on BCCD dataset with 98% precision in bounding-box detection.",
       image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
       tech: ["YOLO", "Python", "OpenCV", "Streamlit", "Computer Vision"],
       metrics: ["89% Accuracy", "98% Precision", "35% Faster Inference", "50+ Concurrent Users"],
-      github: "https://huggingface.co/spaces/DandaLakshmi/blood-cell-detection",
+      github: "https://github.com/DandaLakshmiManiSankar/BloodCelldetection",
       demo: null,
       featured: true
     },
@@ -104,7 +104,7 @@ const portfolioData = {
       image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&q=80",
       tech: ["ML Models(XGBoost/NaiveBayes)", "Python", "Streamlit", "AWS", "Healthcare AI"],
       metrics: ["~90% Accuracy", "40% Better Consistency", "Cloud Deployed", "Real-time Predictions"],
-      github: "https://heartattackriskpredictionproject.streamlit.app/",
+      github: "https://github.com/DandaLakshmiManiSankar",
       demo: null,
       featured: true
     },
@@ -115,7 +115,7 @@ const portfolioData = {
       image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80",
       tech: ["GPT-3.5", "Gemini API", "Mistral AI", "Python", "Telegram API"],
       metrics: ["100+ Weekly Users", "<2s Response Time", "35% Efficiency Gain", "Multi-Model Integration"],
-      github: "https://github.com/DandaLakshmiManiSankar/TelegramChatBot",
+      github: "https://github.com/DandaLakshmiManiSankar",
       demo: null,
       featured: true
     },
@@ -479,12 +479,32 @@ const Portfolio = () => {
             </div>
 
             {/* Right Column: Profile Image */}
-            <div className="hidden lg:flex justify-center md:justify-end pt-12">
-              <img
-                src={profile}
-                alt="Danda Lakshmi Mani Sankar Profile"
-                className="rounded-full w-80 h-80 object-cover border-4 border-white shadow-2xl"
-              />
+            <div className="flex justify-center items-center w-full lg:w-1/3 lg:translate-x-28">
+
+              <div className="relative">
+                <div className="absolute -inset-6 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
+                <div
+                  className="
+                    relative
+                    w-52 h-52
+                    sm:w-64 sm:h-64
+                    lg:w-96 lg:h-96
+                    rounded-full
+                    overflow-hidden
+                    border-4 border-white
+                    shadow-2xl
+                    bg-white
+                  "
+                >
+                  <img
+                    src={profile}
+                    alt="Profile"
+                    className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+        
+              
             </div>
           </div>
         </div>
