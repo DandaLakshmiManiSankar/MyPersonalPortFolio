@@ -82,7 +82,7 @@ const portfolioData = {
       image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=800&q=80",
       tech: ["YOLO", "Python", "OpenCV", "Streamlit", "Computer Vision"],
       metrics: ["89% Accuracy", "98% Precision", "35% Faster Inference", "50+ Concurrent Users"],
-      github: "https://github.com/DandaLakshmiManiSankar/BloodCelldetection",
+      github: "https://huggingface.co/spaces/DandaLakshmi/blood-cell-detection",
       demo: null,
       featured: true
     },
@@ -104,7 +104,7 @@ const portfolioData = {
       image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?w=800&q=80",
       tech: ["ML Models(XGBoost/NaiveBayes)", "Python", "Streamlit", "AWS", "Healthcare AI"],
       metrics: ["~90% Accuracy", "40% Better Consistency", "Cloud Deployed", "Real-time Predictions"],
-      github: "https://github.com/DandaLakshmiManiSankar",
+      github: "https://heartattackriskpredictionproject.streamlit.app/",
       demo: null,
       featured: true
     },
